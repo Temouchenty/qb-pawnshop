@@ -13,6 +13,8 @@ Edited by ANZ Developments on 26/02/2022.
 
 -Money earned from selling items out back of shop goes back into society funds.
 
+-Employee commission payments on all sales.
+
 -Employees can trade the items in out the back of shop for a profit.
 
 -Complete with boss menu setup, fully functioning job.
