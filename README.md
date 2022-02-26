@@ -1,8 +1,8 @@
-**qb-pawnshop**
+##qb-pawnshop##
 Edit of qb-pawnshop for ANZ Gaming Networks. 
 Edited by ANZ Developments on 26/02/2022.
 
-**What I've changed with this version: **
+## What I've changed with this version: 
 -Converted to a player ran store. 
 -Reverse billing system (Store pays out the customer based on what items they have).
 -Reverse billing system ^ payouts to customer comes out of society funds.
