@@ -1,4 +1,5 @@
-##qb-pawnshop##
+## qb-pawnshop
+
 Edit of qb-pawnshop for ANZ Gaming Networks. 
 Edited by ANZ Developments on 26/02/2022.
 
