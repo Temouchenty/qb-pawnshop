@@ -35,14 +35,16 @@ RegisterServerEvent("qb-pawnshop:server:Charge", function(citizen, price)
     local biller = QBCore.Functions.GetPlayer(source)
     local billed = QBCore.Functions.GetPlayer(tonumber(citizen))
     local amount = tonumber(price)
+    local commission = amount * 0.12 -- AMOUNT THE EMPLOYEE RECEIVES AS COMMISSION (12% BY DEFAULT)
 	if billed ~= nil then
 		if biller.PlayerData.citizenid ~= billed.PlayerData.citizenid then
 			if amount and amount > 0 then
                 billed.Functions.AddMoney('cash', amount, "pawn-payment")
                 TriggerEvent('qb-bossmenu:server:removeAccountMoney','sydpawn', amount)
+                biller.Functions.AddMoney('bank', commission)
                 TriggerClientEvent('QBCore:Notify', billed.PlayerData.source, '$'..amount..' payment received.', 'success') -- CUSTOMER NOTIFICATION OF PAYMENT
-                TriggerClientEvent('QBCore:Notify', biller.PlayerData.source, '$'..amount..' payment sent successfully.', 'success') -- EMPLOYEE NOTIFICATION OF PAYMENT
+                TriggerClientEvent('QBCore:Notify', biller.PlayerData.source, '$'..amount..' payment sent, commission received successfully.', 'success') -- EMPLOYEE NOTIFICATION OF PAYMENT
 			else TriggerClientEvent('QBCore:Notify', src, 'Must Be A Valid Amount Above 0', 'error')	end
 		else TriggerClientEvent('QBCore:Notify', src, 'You cannot pay yourself...', 'error') end
 	else TriggerClientEvent('QBCore:Notify', src, 'Person not available', 'error') end
-end)
+end) 
