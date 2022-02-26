@@ -25,4 +25,4 @@ Edited by ANZ Developments on 26/02/2022.
 
 -Removed the melting process and coding.
 
-View the README file for instructions on how to set up...
+## View the README file for instructions on how to set up or join the discord https://dsc.gg/anzdevelopments
